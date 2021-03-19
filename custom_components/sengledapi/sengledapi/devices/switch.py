@@ -33,9 +33,7 @@ class Switch:
         _LOGGER.debug("Switch " + self._friendly_name + " turning on.")
 
         url = (
-            "https://"
-            + self._country
-            + "-elements.cloud.sengled.com/zigbee/device/deviceSetOnOff.json"
+            "https://elements.cloud.sengled.com/zigbee/device/deviceSetOnOff.json"
         )
 
         payload = {"deviceUuid": self._device_mac, "onoff": "1"}
@@ -50,9 +48,7 @@ class Switch:
         _LOGGER.debug("Switch " + self._friendly_name + " turning off.")
 
         url = (
-            "https://"
-            + self._country
-            + "-elements.cloud.sengled.com/zigbee/device/deviceSetOnOff.json"
+            "https://elements.cloud.sengled.com/zigbee/device/deviceSetOnOff.json"
         )
 
         payload = {"deviceUuid": self._device_mac, "onoff": "0"}

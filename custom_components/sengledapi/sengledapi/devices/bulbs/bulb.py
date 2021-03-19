@@ -107,8 +107,7 @@ class Bulb:
 
             url = (
                 HTTPS
-                + self._country
-                + "-elements.cloud.sengled.com/zigbee/device/deviceSetOnOff.json"
+                + "elements.cloud.sengled.com/zigbee/device/deviceSetOnOff.json"
             )
 
             payload = {"deviceUuid": self._device_mac, "onoff": onoff}
@@ -158,7 +157,7 @@ class Bulb:
                 "Bulb %s %s setting brightness.", self._friendly_name, self._device_mac
             )
 
-            url = HTTPS + self._country + SET_BRIGHTNESS
+            url = HTTPS + SET_BRIGHTNESS
 
             payload = {"deviceUuid": self._device_mac, "brightness": brightness}
 
@@ -200,7 +199,7 @@ class Bulb:
                 color_temperature_precentage,
             )
 
-            url = HTTPS + self._country + SET_COLOR_TEMPERATURE
+            url = HTTPS + SET_COLOR_TEMPERATURE
 
             payload = {
                 "deviceUuid": self._device_mac,
@@ -252,7 +251,7 @@ class Bulb:
 
             _LOGGER.info("SengledApi: Set Color R %s G %s B %s", int(a), int(b), int(c))
 
-            url = HTTPS + self._country + SET_GROUP
+            url = HTTPS + SET_GROUP
 
             payload = {
                 "cmdId": 129,

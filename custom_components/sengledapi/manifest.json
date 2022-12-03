@@ -1,5 +1,6 @@
 {
   "domain": "sengledapi",
+  "version": "0.2",
   "name": "Sengled Integration",
   "documentation": "https://github.com/jfarmer08/ha-sengledapi",
   "dependencies": [],
